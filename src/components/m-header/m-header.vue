@@ -1,6 +1,6 @@
 <template>
-  <div class="header">
-    <img class="logo" src="../../common/images/default.png"/>
+  <div class="m-header">
+    <div class="icon"></div>
     <h1 class="title">Chicken Music</h1>
   </div>
 </template>
@@ -17,16 +17,26 @@ export default {
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
   @import '~common/stylus/variable'
+  @import "~common/stylus/mixin"
 
-  .header
-    text-align: center
+  .m-header
+    position: relative
     height: 44px
-    line-height 44px
-    .logo
-      width: 32px
-      height: 36px
+    text-align: center
+    color: $color-theme
+    font-size: 0
+    .icon
+      display: inline-block
       vertical-align: top
+      margin-top: 6px
+      width: 30px
+      height: 32px
+      margin-right: 9px
+      bg-image('logo')
+      background-size: 30px 32px
     .title
       display: inline-block
-      color: $color-theme
+      /*vertical-align: top*/
+      line-height: 44px
+      font-size: $font-size-large
 </style>
